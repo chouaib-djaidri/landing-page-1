@@ -191,3 +191,132 @@ body {
 body {
   padding-top: 5.71rem;
 }
+
+/* Hero Section */
+.hero {
+  min-height: calc(100svh - 5.71rem);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fdf8 0%, #e8f5e8 100%);
+  padding: 2rem 0;
+}
+
+.hero__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--foreground-color);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero__title-highlight {
+  color: var(--primary-color);
+}
+
+.hero__description {
+  font-size: 1.2rem;
+  color: var(--muted-color);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid transparent;
+}
+
+.hero__button-icon {
+  transition: transform 0.3s ease;
+}
+
+.hero__button:hover .hero__button-icon {
+  transform: translateX(0.25rem);
+}
+
+.hero__button--primary {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border-color: var(--primary-color);
+}
+
+.hero__button--primary:hover {
+  background-color: rgba(102, 173, 102, 0.9);
+  color: var(--background-color);
+  border-color: var(--primary-color);
+}
+
+.hero__button--secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.hero__button--secondary:hover {
+  background-color: rgba(102, 173, 102, 0.1);
+  color: var(--primary-color);
+}
+
+
+/* Hero Responsive */
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: calc(100svh - 5.71rem);
+    padding: 1rem 0;
+  }
+
+  .hero__container {
+    padding: 0 1rem;
+  }
+
+  .hero__content {
+    max-width: none;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero__description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero__actions {
+    gap: 0.75rem;
+  }
+
+  .hero__button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
