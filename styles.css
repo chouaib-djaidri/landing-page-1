@@ -446,3 +446,148 @@ body {
     padding: 1.2rem;
   }
 }
+
+/* About Section */
+.about {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8fdf8 0%, #e8f5e8 100%);
+}
+
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--foreground-color);
+  margin-bottom: 1.5rem;
+}
+
+.about__title-highlight {
+  color: var(--primary-color);
+}
+
+.about__description {
+  font-size: 1.1rem;
+  color: var(--muted-color);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.about__features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about__feature-icon {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-color);
+}
+
+.about__feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--foreground-color);
+  margin-bottom: 0.5rem;
+}
+
+.about__feature-description {
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  line-height: 1.5;
+}
+
+.about__stats {
+  background-color: var(--background-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: fit-content;
+}
+
+.about__stat {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.about__stat:last-child {
+  border-bottom: none;
+}
+
+.about__stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.about__stat-label {
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  font-weight: 500;
+}
+
+/* About Responsive */
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 3rem 0;
+  }
+
+  .about__container {
+    padding: 0 1rem;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about__title {
+    font-size: 2rem;
+  }
+
+  .about__description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .about__features {
+    gap: 1.5rem;
+  }
+
+  .about__stats {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .about__stat-number {
+    font-size: 2rem;
+  }
+}
