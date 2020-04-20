@@ -1017,3 +1017,22 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* Footer */
+.footer {
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+  padding: 1.5rem 0;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  color: #b3b3b3;
+}
