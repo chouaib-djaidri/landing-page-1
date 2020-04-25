@@ -47,23 +47,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Smooth scrolling and active navigation
-  const navLinks = document.querySelectorAll(".navbar__link, .mobile-menu__link");
+  const navLinks = document.querySelectorAll(".navbar__link, .mobile-menu__link, .hero__button");
   const sections = document.querySelectorAll("section[id]");
   const navbarHeight = document.querySelector(".navbar").offsetHeight;
 
   // Smooth scrolling when clicking navigation links
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
+      const href = this.getAttribute("href");
 
-      if (targetSection) {
-        const offsetTop = targetSection.offsetTop - navbarHeight;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth"
-        });
+      // Only prevent default and smooth scroll for internal links (starting with #)
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - navbarHeight;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+          });
+        }
       }
     });
   });
